@@ -1,0 +1,265 @@
+@import 'src/theme';
+
+.watch-detail-item {
+    .bg-light-cover {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.2s;
+        background-color: $color_transparent_80;
+        z-index: 149;
+        &.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .top {
+        display: flex;
+        flex-direction: column;
+        .title {
+            color: $color_black;
+            padding: 0;
+            line-height: 35px;
+            text-align: left;
+            font-size: 25px;
+            letter-spacing: -2px;
+            white-space: normal;
+            overflow: inherit;
+            font-weight: $font_bold;
+            margin-bottom: 0;
+        }
+        .type {
+            font-size: 14px;
+            line-height: 25px;
+            color: $color_gray_555555;
+            margin-bottom: 15px;
+        }
+    }
+    .main {
+        .server-list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 20px;
+            .server-item {
+                flex: 1;
+                line-height: 25px;
+                padding: 10px 5px;
+                background-color: $color_background_2;
+                vertical-align: top;
+                text-align: center;
+
+                .text {
+                    color: $color_white;
+                    font-weight: $font_bold;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                }
+                &.active {
+                    background-color: $color_background_3;
+                    box-shadow: inset 0 2px 0 $color_primary;
+                }
+            }
+        }
+        .video-player {
+            position: relative;
+            z-index: 150;
+        }
+    }
+
+    .option {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+        .video-option {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .episode-list-item {
+                background-color: $color_background_2;
+                line-height: 38px;
+                border-radius: 20px;
+                box-shadow: inset 1px 0 0 $color_transparent_20;
+                width: 50px;
+                text-align: center;
+                margin-right: 10px;
+                cursor: pointer;
+
+                .episode-list-icon {
+                    color: $color_yellow_FFC107;
+                    font-size: 15px;
+                    > svg {
+                        margin-bottom: 3px;
+                    }
+                }
+            }
+
+            .report-list-item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                border-radius: 20px;
+                padding: 7px 15px;
+                margin-right: 10px;
+
+                background-color: $color_white;
+
+                box-shadow: 0 0 30px 0 $color_transparent_10;
+                cursor: pointer;
+                .report-icon {
+                    color: $color_red_FB3447;
+                    font-size: 13px;
+                    margin-right: 10px;
+                    margin-bottom: 5px;
+                }
+                .report-title {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 12px;
+                    line-height: 12px;
+                    .title {
+                        font-weight: $font_bold;
+                        color: $color_text_2;
+                        transition: all 0.2s linear;
+                    }
+                    .sub {
+                        transition: all 0.2s linear;
+                    }
+                }
+                &:hover {
+                    .report-title {
+                        .title {
+                            color: $color_red_FB3447;
+                        }
+                        .sub {
+                            color: $color_red_FB3447;
+                        }
+                    }
+                }
+            }
+
+            .option-item {
+                padding: 0;
+                width: 40px;
+                height: 40px;
+                text-align: center;
+                line-height: 40px;
+                font-size: 15px;
+                color: $color_primary;
+                background-color: $color_white;
+                box-shadow: 0 0 30px 0 $color_transparent_10;
+                border-radius: 20px;
+                white-space: nowrap;
+                cursor: pointer;
+                margin-right: 10px;
+                .icon {
+                    margin-bottom: 5px;
+                }
+                .compress-icon {
+                    color: $color_red_FB3447;
+                }
+            }
+        }
+
+        .download-option {
+            background-color: $color_green_00B046;
+            font-size: 12px;
+            padding: 7px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .download-icon {
+                color: $color_white;
+                font-size: 15px;
+                margin-right: 10px;
+                > svg {
+                    margin-top: 3px;
+                    vertical-align: baseline;
+                }
+            }
+            .download-title {
+                display: flex;
+                flex-direction: column;
+                font-size: 12px;
+                line-height: 12px;
+
+                .title {
+                    font-weight: $font_bold;
+                    color: $color_white;
+                    transition: all 0.2s linear;
+                }
+                .sub {
+                    color: $color_white;
+                    transition: all 0.2s linear;
+                }
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .share {
+        transition: 0.2s;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 20px;
+
+        .share-icon {
+            color: $color_primary;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+        .share-title {
+            display: flex;
+            flex-direction: column;
+
+            .title {
+                font-weight: $font_bold;
+                color: $color_black;
+                letter-spacing: -1px;
+                line-height: 30px;
+                font-size: 20px;
+            }
+            .sub {
+                font-size: 12px;
+                color: $color_gray_555555;
+                line-height: 20px;
+            }
+        }
+    }
+
+    &.fullscreen {
+        .title-wrap {
+            .title {
+                color: $color_white;
+            }
+            .type {
+                color: $color_text;
+            }
+        }
+        .share {
+            .share-title {
+                .title {
+                    color: $color_white;
+                }
+                .sub {
+                    color: $color_text;
+                }
+            }
+        }
+    }
+}

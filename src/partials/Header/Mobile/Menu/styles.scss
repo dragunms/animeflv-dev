@@ -1,0 +1,19 @@
+@import 'src/theme';
+
+.header-menu-mobile {
+    display: flex;
+
+    .menu-item {
+        .link {
+            text-transform: uppercase;
+            font-size: 15px;
+            font-weight: $font_bold;
+            color: $color_white;
+            line-height: 50px;
+            opacity: 0.5;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}

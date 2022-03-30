@@ -1,0 +1,35 @@
+@import 'src/theme';
+
+@mixin loginButton {
+    text-align: start;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    color: $color_white;
+    background-color: $color_white;
+
+    .btn-label {
+        flex: 1;
+    }
+}
+
+.btn-google {
+    @include loginButton;
+
+    background-color: $color_red_DD4B39;
+
+    .icon-wrapper {
+        padding: 11px 12px;
+        margin-right: 10px;
+
+        background-color: $color_red_B13C2E;
+    }
+    .google-icon {
+        width: 18px;
+    }
+}

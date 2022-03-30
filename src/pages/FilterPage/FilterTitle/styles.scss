@@ -1,0 +1,44 @@
+@import 'src/theme';
+
+.filter-title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 20px 0;
+
+    .prefix-icon-wrap {
+        width: 40px;
+        height: 40px;
+    }
+    .prefix-icon {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        color: $color_transparent_20;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 20px;
+        background: linear-gradient(to bottom, rgba(255, 186, 0, 1) 0%, rgba(255, 128, 0, 1) 100%);
+        &:after {
+            width: 30px;
+            height: 20px;
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.15);
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 0;
+        }
+    }
+    .title {
+        font-size: 25px;
+        font-weight: $font_light;
+        color: $color_text_2;
+        line-height: 30px;
+        padding: 5px 0;
+        flex: 1;
+        margin-left: 10px;
+    }
+}

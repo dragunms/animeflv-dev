@@ -1,0 +1,141 @@
+@import 'src/theme';
+
+.main-horizontal-list-desktop {
+    margin: 0 -15px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    .title-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .title {
+            font-size: 25px;
+            font-weight: $font_light;
+            color: $color_text_2;
+            line-height: 30px;
+            padding: 5px 0;
+        }
+        .order {
+            background-color: $color_primary;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: $font_bold;
+            line-height: 30px;
+            min-width: 65px;
+            padding: 0 15px;
+            height: 30px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -5px;
+                margin: auto;
+                width: 0;
+                height: 0;
+                border-left: 5px solid $color_transparent;
+                border-right: 5px solid $color_transparent;
+                border-top: 5px solid $color_primary;
+            }
+            .link {
+                color: $color_white;
+            }
+        }
+    }
+    .main-list-wrap {
+        padding-top: 10px;
+
+        .main-horizontal-list {
+            margin: 0 -10px;
+            .main-list-item-wrap {
+                display: inline-block;
+                padding: 0 10px;
+            }
+            .main-list-item {
+                position: relative;
+                border-radius: 5px;
+                overflow: hidden;
+                z-index: 1;
+                width: 198px;
+
+                .image {
+                    @include aspectRatio(3, 2);
+                    transition: all 0.2s linear;
+                    .content {
+                        height: 100%;
+                    }
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        opacity: 0.8;
+                        padding-top: 30%;
+                        z-index: 2;
+                    }
+                }
+                .info-wrap {
+                    position: absolute;
+                    bottom: 0;
+                    border-radius: 0 0 5px 5px;
+                    width: 100%;
+                    left: 0;
+                    right: 0;
+                    padding: 0 10px;
+                    z-index: 9;
+
+                    .episode {
+                        background-color: $color_secondary;
+                        padding: 0 8px;
+                        border-radius: 32px;
+                        font-size: 10px;
+                        color: $color_white;
+                        line-height: 16px;
+                        font-weight: $font_bold;
+                        text-transform: capitalize;
+                        z-index: 3;
+                    }
+                    .title {
+                        color: $color_white;
+                        font-weight: $font_bold;
+                        z-index: 3;
+                        text-transform: capitalize;
+                        font-size: 15px;
+                        padding: 3px;
+                        @include numberOfLines(1);
+                    }
+                }
+                .icon {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    z-index: 9;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px 8px;
+                    font-size: 20px;
+                    color: $color_white;
+                    transition: right 0.4s;
+                }
+
+                &:hover {
+                    .image {
+                        transform: scale(1.2);
+                        opacity: 0.7;
+                    }
+                    .icon {
+                        right: -40px;
+                    }
+                }
+            }
+        }
+    }
+}

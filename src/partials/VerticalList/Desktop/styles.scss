@@ -1,0 +1,84 @@
+@import 'src/theme';
+
+.vertical-list-desktop {
+    background-color: $color_white;
+    border-radius: 3px;
+    .vertical-list-header {
+        border-bottom: 1px solid $color_gray_F3F3F3;
+        color: $color_text_2;
+        padding: 15px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        .header-title {
+            flex: 1;
+            font-weight: $font_bold;
+            font-size: 15px;
+        }
+        .header-icon {
+            color: $color_secondary;
+            justify-self: flex-end;
+        }
+    }
+    .list-wrap {
+        padding-top: 15px;
+        .list {
+            .item {
+                padding: 10px 15px;
+                display: flex;
+                color: $color_text_2;
+                align-items: center;
+                transition: all 0.2s linear;
+                .item-icon {
+                    width: 15px;
+                    height: 15px;
+                    display: flex;
+                    color: $color_text;
+                    align-items: center;
+                    opacity: 0.4;
+                    margin-right: 10px;
+                    transition: all 0.2s linear;
+                }
+                .item-title {
+                    @include numberOfLines(1);
+                    flex: 1;
+                    padding-right: 20px;
+                }
+
+                &:hover {
+                    color: $color_primary;
+                    .item-icon {
+                        color: $color_primary;
+                        opacity: 1;
+                    }
+                    .item-type {
+                        opacity: 1;
+                    }
+                }
+                .item-type {
+                    flex-shrink: 0;
+                    opacity: 0.5;
+                    font-size: 10px;
+                    font-weight: $font_bold;
+                    line-height: 16px;
+                    width: 60px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: $color_white;
+                    display: inline-block;
+                    height: 16px;
+                    border-radius: 8px;
+                    transition: all 0.2s linear;
+                    &.anime {
+                        background-color: $color_primary;
+                        border-color: $color_primary;
+                    }
+                    &.ova {
+                        background-color: $color_secondary;
+                        border-color: $color_secondary;
+                    }
+                }
+            }
+        }
+    }
+}

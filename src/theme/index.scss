@@ -1,0 +1,125 @@
+/*
+	Width
+*/
+
+$breakpoint_xxl: 1200px;
+$breakpoint_xl: 1020px;
+$breakpoint_lg: 768px;
+$breakpoint_md: 468px;
+$breakpoint_sm: 360px;
+$breakpoint_xs: 0px;
+
+/*
+	Font size
+*/
+
+$font_light: 300;
+$font_regular: 400;
+$font_semi_bold: 600;
+$font_bold: 700;
+$font_extra_bold: 800;
+/*
+	Colors
+*/
+
+$color_primary: #01bcf3;
+$color_secondary: #ff7e00;
+$color_tertiary: #01ae43;
+$color_transparent: rgba(0, 0, 0, 0);
+$color_transparent_03: rgba(0, 0, 0, 0.03);
+$color_transparent_05: rgba(0, 0, 0, 0.05);
+$color_transparent_10: rgba(0, 0, 0, 0.1);
+$color_transparent_20: rgba(0, 0, 0, 0.2);
+$color_transparent_30: rgba(0, 0, 0, 0.3);
+$color_transparent_40: rgba(0, 0, 0, 0.4);
+$color_transparent_50: rgba(0, 0, 0, 0.5);
+$color_transparent_60: rgba(0, 0, 0, 0.6);
+$color_transparent_80: rgba(0, 0, 0, 0.8);
+$color_white_transparent_10: rgba(255, 255, 255, 0.1);
+$color_primary_transparent_10: rgba(1, 188, 242, 0.1);
+$color_primary_transparent_40: rgba(1, 188, 242, 0.4);
+$color_gray_transparent_90: rgba(66, 66, 66, 0.9);
+
+$color_background: #3b4248;
+$color_background_2: #2e3437;
+$color_background_3: #252a2c;
+$color_background_4: #171e22;
+$color_link: #428bca;
+$color_text: #9da1a4;
+$color_text_2: #3b4248;
+$color_border: #e8e7f0;
+$color_border_2: #adadad;
+$color_white: #ffffff;
+$color_text_3: #b0bec5;
+$color_black: #000000;
+$color_skeleton: #f8f8f8;
+
+$color_red_FF1818: #ff1818;
+$color_red_FF3146: #ff3146;
+$color_red_B13C2E: #b13c2e;
+$color_red_DD4B39: #dd4b39;
+$color_red_FB3447: #fb3447;
+$color_red_FD3246: #fd3246;
+
+$color_yellow_FFC107: #ffc107;
+
+$color_green_007A2D: #007a2d;
+$color_green_00C853: #00c853;
+$color_green_00B046: #00b046;
+
+$color_facebook_primary: #0d47a1;
+
+$color_twitter_primary: #00b0ff;
+
+$color_gray_CCCCCC: #cccccc;
+$color_gray_DDDDDD: #dddddd;
+$color_gray_999999: #999999;
+$color_gray_CBCBCB: #cbcbcb;
+$color_gray_F3F3F3: #f3f3f3;
+$color_gray_555555: #555555;
+
+/*
+ Text
+ */
+@mixin numberOfLines($number: 1) {
+    /*! autoprefixer: off */
+    display: -webkit-box;
+    /*! autoprefixer: off */
+    -webkit-line-clamp: $number;
+    /*! autoprefixer: off */
+    -moz-line-clamp: $number;
+    /*! autoprefixer: off */
+    line-clamp: $number;
+    /*! autoprefixer: off */
+    overflow: hidden;
+    /*! autoprefixer: off */
+    text-overflow: ellipsis;
+    /*! autoprefixer: off */
+    -webkit-box-orient: vertical;
+    /*! autoprefixer: off */
+    -moz-box-orient: vertical;
+    /*! autoprefixer: off */
+    box-orient: vertical;
+    /*! autoprefixer: off */
+}
+
+/*
+	Aspect Ratio
+*/
+@mixin aspectRatio($width, $height: 1) {
+    position: relative;
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+
+    > .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: auto;
+    }
+}

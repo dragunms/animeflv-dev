@@ -1,0 +1,86 @@
+@import 'src/theme';
+
+.detail-episode-list {
+    background-color: $color_white;
+    border-radius: 3px;
+    box-shadow: 0 0 30px 0 $color_transparent_10;
+    padding: 15px 20px 20px;
+    margin-bottom: 20px;
+    .top {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .title {
+            font-size: 20px;
+            font-weight: $font_bold;
+            line-height: 30px;
+            letter-spacing: -1px;
+            color: $color_text_2;
+            flex: 1;
+        }
+        .option {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .sort {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                color: $color_white;
+                height: 34px;
+                padding: 6px 10px;
+                border-radius: 4px;
+                margin-right: 10px;
+                cursor: pointer;
+
+                .sort-icon {
+                    margin-right: 5px;
+                    font-size: 16px;
+                }
+
+                &.desc {
+                    background-color: $color_primary;
+                }
+                &.asc {
+                    background-color: $color_background;
+                }
+            }
+            .search-input {
+                height: 34px;
+                padding: 6px 12px;
+                font-size: 14px;
+                color: $color_gray_555555;
+                background-color: $color_white;
+                background-image: none;
+                border: 1px solid $color_gray_CCCCCC;
+                border-radius: 4px;
+
+                &::placeholder {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .episode-list-wrap {
+        max-height: 1000px;
+        overflow-y: auto;
+        margin: -15px -20px -20px;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: $color_gray_CCCCCC;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: $color_primary;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: $color_primary;
+        }
+    }
+}

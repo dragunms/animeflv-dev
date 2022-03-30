@@ -1,0 +1,44 @@
+@import 'src/theme';
+
+.av-radio-group {
+    margin-bottom: 10px;
+    border: none;
+    width: 100%;
+    .item {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 20px;
+        min-width: 80px;
+    }
+
+    .item.vertical {
+        margin-bottom: 8px;
+    }
+
+    .av-label {
+        display: block;
+        margin-bottom: 6px;
+        font-size: 13px;
+        font-weight: $font_bold;
+    }
+
+    .input {
+        margin-right: 8px;
+    }
+
+    .value-label {
+        font-size: 13px;
+    }
+
+    .error {
+        font-size: 10px;
+        display: block;
+
+        color: $color_red;
+    }
+}
+
+.av-radio-group.vertical {
+    display: flex;
+    flex-direction: column;
+}

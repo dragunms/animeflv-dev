@@ -1,0 +1,13 @@
+.lazy-image {
+    max-width: 100%;
+    height: auto;
+
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+    -webkit-transition: opacity 0.1s ease-in-out;
+    -moz-transition: opacity 0.1s ease-in-out;
+}
+
+.lazy-image {
+    opacity: 1;
+}

@@ -1,0 +1,11 @@
+@import 'src/theme';
+
+.share-button-group {
+    display: flex;
+    .share-button {
+        margin-right: 5px;
+        &:last-child {
+            margin-right: unset;
+        }
+    }
+}

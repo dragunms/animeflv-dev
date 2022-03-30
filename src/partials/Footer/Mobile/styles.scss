@@ -1,0 +1,73 @@
+@import 'src/theme';
+
+.footer-mobile {
+    .footer-wrap {
+        padding: 30px 0;
+        background-color: $color_background;
+        .footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .footer-nav {
+                flex: 1;
+                padding: 10px 0;
+                .nav-label {
+                    margin-bottom: 10px;
+                    font-size: 13px;
+                    line-height: 24px;
+                    text-align: center;
+                    .span {
+                        font-size: 13px;
+                        color: $color_white;
+                    }
+                }
+                .footer-static-page {
+                    .static-page-list {
+                        line-height: 25px;
+                        padding: 0 8px;
+                        font-weight: 700;
+                        background-color: $color_transparent_30;
+                        display: inline-block;
+                        border-radius: 25px;
+                        text-align: center;
+                        .item {
+                            display: inline-block;
+                            vertical-align: top;
+                        }
+                    }
+                    .static-page-item {
+                        padding: 0 2px;
+                        margin: 0 6px;
+                        font-size: 12px;
+                        color: $color_white;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .footer-social-list {
+                .social-list {
+                    display: flex;
+                    .social-item {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 40px;
+                        height: 40px;
+                        line-height: 40px;
+                        border-radius: 20px;
+                        background-color: $color_transparent_20;
+                        font-size: 15px;
+                        color: $color_white;
+                        margin-left: 15px;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: $color_transparent_50;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

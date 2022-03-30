@@ -1,0 +1,37 @@
+@import 'src/theme';
+
+.header-login-desktop {
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .login-wrap {
+        display: flex;
+        align-items: center;
+        padding: 10px 15px;
+
+        border-radius: 5px;
+        background-color: $color_transparent_20;
+
+        cursor: pointer;
+        transition: all 0.2s linear;
+        &:hover {
+            background-color: $color_transparent_40;
+        }
+        .login-icon {
+            color: $color_white;
+            margin-right: 10px;
+        }
+        .label {
+            text-transform: uppercase;
+            font-weight: $font_bold;
+            font-size: 12px;
+            color: $color_white;
+        }
+        &.active {
+            background-color: $color_primary;
+            color: $color_white;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@import 'src/theme/index';
+@import 'src/theme/custom';
+@import 'src/theme/normalize';
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: $font_regular;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $color_text;
+    background: url(assets/images/utils/bg.png) #fff;
+}
+
+button,
+input,
+textarea,
+select,
+label,
+a {
+    transition: all 0.2s linear;
+}

@@ -1,0 +1,4 @@
+export const LAYOUT = {
+    MAIN_LAYOUT: 'MAIN_LAYOUT',
+    EMPTY_LAYOUT: 'EMPTY_LAYOUT',
+};

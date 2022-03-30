@@ -1,0 +1,44 @@
+@import 'src/theme';
+
+.breadcrumb {
+    .breadcrumb-nav {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        .nav-item {
+            color: $color_text_2;
+            font-size: 10px;
+            line-height: 20px;
+            text-transform: uppercase;
+            &:last-child {
+                color: $color_text;
+                font-weight: $font_bold;
+            }
+        }
+        .caret-icon {
+            font-size: 13px;
+            color: $color_yellow_FFC107;
+            padding: 0 5px;
+            line-height: 22px;
+            height: 20px;
+            vertical-align: top;
+            margin-bottom: 3px;
+        }
+        .home-icon {
+            color: $color_primary;
+            font-size: 15px;
+            margin-right: 10px;
+            height: 20px;
+            vertical-align: top;
+            margin-bottom: 5px;
+        }
+    }
+    &.fullscreen {
+        .breadcrumb-nav {
+            .nav-item {
+                color: $color_white;
+            }
+        }
+    }
+}

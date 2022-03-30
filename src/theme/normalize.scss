@@ -1,0 +1,160 @@
+@import 'src/theme';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+    display: block;
+}
+
+[tabindex='-1']:focus {
+    outline: 0 !important;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    -webkit-text-decoration-skip: objects;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    text-align: inherit;
+}
+
+button {
+    border-radius: 0;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: $color_text;
+    outline: none;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+::placeholder {
+    color: $color_text;
+    font-size: 12px;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html [type='button'],
+[type='reset'],
+[type='submit'] {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+    border-style: none;
+    outline: none;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+    box-sizing: border-box;
+}
+
+input[type='date'],
+input[type='time'],
+input[type='datetime-local'],
+input[type='month'] {
+    -webkit-appearance: listbox;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+    -webkit-appearance: none;
+}
+
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+    height: auto;
+}
+
+[type='search'] {
+    outline-offset: -2px;
+    -webkit-appearance: none;
+}
+
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+[type='text'] {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    font: inherit;
+    -webkit-appearance: button;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/**
+ * Remove margin, padding and default styles of list
+ */
+
+ul {
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 0;
+}

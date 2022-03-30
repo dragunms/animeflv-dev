@@ -1,0 +1,162 @@
+@import 'src/theme';
+
+.profile-vertical-list-item {
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .item-wrap {
+        display: flex;
+        flex-direction: row;
+        overflow: inherit;
+        border-radius: 5px;
+        position: relative;
+        width: 100%;
+        box-shadow: inset 0 1px 0 $color_transparent_05, 0 3px 5px $color_transparent_05;
+        margin-bottom: 10px;
+        background-color: $color_white;
+        .premiere {
+            position: absolute;
+            left: -5px;
+            top: -5px;
+            overflow: hidden;
+            width: 70px;
+            height: 70px;
+            z-index: 3;
+            & span {
+                transform: rotate(-45deg);
+                position: absolute;
+                left: -25px;
+                top: 10px;
+                color: $color_white;
+                font-size: 10px;
+                font-weight: $font_bold;
+                width: 100px;
+                text-align: center;
+                text-transform: uppercase;
+                background-color: $color_tertiary;
+                z-index: 2;
+                line-height: 25px;
+            }
+            &:before {
+                left: 0;
+                bottom: 5px;
+                background-color: $color_green_007A2D;
+                position: absolute;
+                width: 5px;
+                height: 7px;
+                content: '';
+                z-index: 1;
+            }
+            &:after {
+                position: absolute;
+                width: 7px;
+                height: 5px;
+                content: '';
+                z-index: 1;
+                right: 5px;
+                top: 0;
+                background-color: $color_green_007A2D;
+            }
+        }
+
+        .image-wrapper {
+            flex-basis: 20%;
+            margin-bottom: 0;
+            overflow: hidden;
+            padding: 5px;
+            .image {
+                border-radius: 5px;
+            }
+        }
+
+        .type {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            border-radius: 15px;
+            opacity: 1;
+            right: auto;
+            margin: 0;
+            top: auto;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            color: $color_white;
+            font-size: 10px;
+            font-weight: $font_bold;
+            padding: 0 15px;
+            &.anime {
+                background-color: $color_primary;
+                border-color: $color_primary;
+            }
+            &.ova {
+                background-color: $color_secondary;
+                border-color: $color_secondary;
+            }
+        }
+
+        .description {
+            position: relative;
+            flex: 1;
+            margin-bottom: 10px;
+            transition: 0.3s;
+            padding: 8px;
+            border-radius: 5px;
+            line-height: 20px;
+            font-size: 12px;
+            color: $color_gray_999999;
+
+            &:before {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 70px;
+                border-radius: 0 0 5px 5px;
+                background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+                background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+                background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+            }
+            .description-title {
+                font-weight: $font_bold;
+                font-size: 14px;
+                color: $color_black;
+                margin-bottom: 5px;
+                padding: 0 20px 0 0;
+            }
+            .rating {
+                display: flex;
+                align-items: center;
+                .star-icon {
+                    font-size: 14px;
+                    color: $color_yellow_FFC107;
+                    margin-right: 3px;
+                    margin-top: -3px;
+                }
+                .rating-value {
+                    color: $color_gray_555555;
+                    font-weight: $font_bold;
+                    line-height: 1;
+                }
+            }
+            .description-content {
+                .description-content-title {
+                    margin-bottom: 0;
+                    font-size: 10px;
+                    font-weight: $font_bold;
+                    text-transform: uppercase;
+                    line-height: 1;
+                    color: $color_gray_555555;
+                }
+                .description-text {
+                    line-height: 18px;
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+}

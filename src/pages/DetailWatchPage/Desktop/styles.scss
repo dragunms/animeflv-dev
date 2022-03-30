@@ -1,0 +1,15 @@
+@import 'src/theme';
+
+.detail-watch-page-desktop {
+    padding-top: 20px;
+    .transition {
+        transition: all 0.3s linear;
+    }
+    .detail-watch-page-wrapper {
+        transition: all 0.2s linear;
+        &.fullscreen {
+            background-color: $color_background_4;
+            margin-bottom: 20px;
+        }
+    }
+}

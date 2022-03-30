@@ -1,0 +1,38 @@
+@import 'src/theme';
+
+.checkbox-group-title {
+    font-weight: $font_semi_bold;
+}
+.av-checkbox-group {
+    border: none;
+
+    .item {
+        display: inline;
+        align-items: center;
+        margin-right: 20px;
+        min-width: 80px;
+    }
+
+    .av-label {
+        display: block;
+        font-size: 13px;
+        font-weight: $font_bold;
+    }
+
+    .input {
+        margin-right: 8px;
+    }
+
+    .value-label {
+        font-size: 13px;
+
+        margin-bottom: unset;
+    }
+
+    .error {
+        font-size: 10px;
+        display: block;
+
+        color: $color_red_FF1818;
+    }
+}

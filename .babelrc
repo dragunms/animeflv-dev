@@ -1,0 +1,24 @@
+{
+  "presets": [
+    "razzle/babel"
+  ],
+  "plugins": [
+    "@loadable/babel-plugin"
+
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "transform-remove-console",
+          {
+            "exclude": [
+              "error",
+              "info"
+            ]
+          }
+        ]
+      ]
+    }
+  }
+}

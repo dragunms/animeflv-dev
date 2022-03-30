@@ -1,0 +1,14 @@
+@import 'src/theme';
+
+.header-desktop {
+    background-color: $color_background;
+    opacity: 1.2;
+    .header-wrap {
+        background-color: $color_transparent_20;
+        padding: 13px 0;
+    }
+    .header {
+        display: flex;
+        flex-direction: row;
+    }
+}

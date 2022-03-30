@@ -1,0 +1,83 @@
+@import 'src/theme';
+
+.detail-social {
+    display: flex;
+    flex-direction: column;
+    margin: 85px 0;
+    .vote-wrap {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex: 1;
+        margin-bottom: 5px;
+
+        .vote-label {
+            background-color: $color_primary;
+            width: 60px;
+            line-height: 50px;
+            letter-spacing: -1px;
+            border-radius: 3px 0 0 3px;
+            font-weight: $font_bold;
+            font-size: 25px;
+            color: $color_white;
+            text-align: center;
+        }
+        .rating {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .vote-value {
+            background-color: $color_gray_transparent_90;
+            height: 50px;
+            padding: 3px 20px 5px 10px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 0 3px 3px 0;
+            flex: 1;
+            .rating-icon {
+                padding-right: 3px;
+                font-size: 15px;
+                color: $color_yellow_FFC107;
+            }
+            .vote {
+                margin-top: 2px;
+                color: $color_white;
+                font-size: 10px;
+                text-transform: uppercase;
+            }
+        }
+    }
+    .social-list {
+        display: flex;
+        align-items: center;
+        margin: 0 -2px;
+        .social-item {
+            padding: 0 2px;
+            cursor: pointer;
+            flex: 1;
+            .item {
+                display: block;
+                text-transform: uppercase;
+                font-weight: $font_bold;
+                font-size: 10px;
+                line-height: 25px;
+                border-radius: 3px;
+                text-align: center;
+                background-color: $color_white;
+                transition: all 0.2s linear;
+                &.facebook {
+                    color: $color_facebook_primary;
+                    box-shadow: 0 2px 0 $color_facebook_primary;
+                }
+                &.twitter {
+                    color: $color_twitter_primary;
+                    box-shadow: 0 2px 0 $color_twitter_primary;
+                }
+                &:hover {
+                    background-color: $color_gray_CCCCCC;
+                }
+            }
+        }
+    }
+}

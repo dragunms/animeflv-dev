@@ -1,0 +1,51 @@
+@import 'src/theme';
+
+.report-modal {
+    .modal-dialog {
+        max-width: 90vw;
+        .modal-header {
+            .modal-title {
+                font-size: 20px;
+                font-weight: $font_light;
+                color: $color_text_2;
+                display: block;
+                position: relative;
+                white-space: nowrap;
+                -ms-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                .flag-icon {
+                    color: $color_yellow_FFC107;
+                    margin-right: 10px;
+                }
+            }
+            .close {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                border-radius: 15px;
+                text-align: center;
+                background-color: $color_red_FB3447;
+                color: $color_white;
+                padding: 0;
+                opacity: 1;
+                font-size: 24px;
+                font-weight: $font_bold;
+                border: none;
+                .sr-only {
+                    display: none;
+                }
+            }
+        }
+        .modal-footer {
+            justify-content: flex-start;
+            .btn {
+                border: 1px solid $color_border_2;
+                border-radius: 5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@import 'src/theme';
+
+$grid-gutter-width: 32px !default;
+
+$grid-breakpoints: (
+    xs: $breakpoint_xs,
+    sm: $breakpoint_sm,
+    md: $breakpoint_md,
+    lg: $breakpoint_lg,
+    xl: $breakpoint_xl,
+    xxl: $breakpoint_xxl,
+);
+$container-max-widths: (
+    xs: $breakpoint_xs,
+    sm: $breakpoint_sm,
+    md: $breakpoint_md,
+    lg: $breakpoint_lg,
+    xl: $breakpoint_xl - $grid-gutter-width,
+    xxl: $breakpoint_xxl,
+);
+
+$theme-colors: (
+    'color-primary': $color_primary,
+    'color-secondary': $color_secondary,
+);
+
+.primary-link {
+    color: $color_primary;
+    cursor: pointer;
+}
+.secondary-link {
+    color: $color_secondary;
+    cursor: pointer;
+}
+.default-link {
+    color: $color_link;
+    cursor: pointer;
+}
+.text-link {
+    color: $color_text;
+    cursor: pointer;
+}
+.primary-link:hover {
+    text-decoration: none;
+
+    color: $color_secondary;
+}
+.secondary-link:hover,
+.default-link:hover,
+.text-link:hover,
+.text-link.active {
+    text-decoration: none;
+
+    color: $color_primary;
+}
+
+.float-left {
+    float: left;
+}
+.float-left {
+    float: right;
+}
+.clear-both {
+    clear: both;
+}
+
+@import '~bootstrap/scss/bootstrap';

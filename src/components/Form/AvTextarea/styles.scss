@@ -1,0 +1,42 @@
+@import 'src/theme';
+
+.av-textarea {
+    margin-bottom: 15px;
+
+    .av-label {
+        display: block;
+        margin-bottom: 6px;
+
+        font-size: 14px;
+        font-weight: $font_bold;
+    }
+
+    .required {
+        margin-right: 6px;
+
+        font-size: 10.5px;
+
+        color: $color_red_FF1818;
+    }
+
+    .av-input {
+        border: 1px solid $color_gray_CCCCCC;
+        outline: none;
+        width: 100%;
+        padding: 10px 12px;
+
+        font-size: 14px;
+
+        background-color: $color_white;
+    }
+
+    .av-input::placeholder {
+        color: $color_gray_999999;
+    }
+
+    .error {
+        display: block;
+        margin-top: 10px;
+        color: $color_red_FF1818;
+    }
+}

@@ -1,0 +1,12 @@
+@import 'src/theme';
+
+.video-player-container {
+    margin-bottom: 20px;
+
+    .video-player-iframe {
+        @include aspectRatio(16, 9);
+        .content {
+            height: 100%;
+        }
+    }
+}

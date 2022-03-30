@@ -1,0 +1,96 @@
+@import 'src/theme';
+
+.top-banner-desktop {
+    background-color: $color_white;
+    .top-banner-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 5px;
+        .text-block {
+            display: flex;
+            flex-direction: column;
+            .title {
+                font-weight: $font_bold;
+                font-size: 20px;
+                color: $color_black;
+                line-height: 25px;
+                margin-bottom: 10px;
+            }
+            .sub-title {
+                font-size: 15px;
+                line-height: 20px;
+            }
+        }
+        .social-list-block {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .social-block-item {
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                flex-grow: 1;
+                cursor: pointer;
+                .icon {
+                    display: block;
+                    font-size: 32px;
+                    line-height: 40px;
+                    margin-bottom: 5px;
+                    transition: all 0.2s;
+                    &.facebook-icon {
+                        color: $color_facebook_primary;
+                    }
+                    &.twitter-icon {
+                        color: $color_twitter_primary;
+                    }
+                    &.instagram-icon {
+                        color: $color_red_DD4B39;
+                    }
+                }
+
+                .social-block-text {
+                    flex-grow: 1;
+                    display: block;
+                    font-size: 15px;
+                    line-height: 20px;
+                    font-weight: $font_bold;
+                    white-space: nowrap;
+                    &.facebook {
+                        color: $color_facebook_primary;
+                    }
+                    &.twitter {
+                        color: $color_twitter_primary;
+                    }
+                    &.instagram {
+                        color: $color_red_DD4B39;
+                    }
+                }
+
+                &:hover {
+                    .icon {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+        }
+        .hide-button {
+            border-radius: 50%;
+            background-color: $color_red_FB3447;
+            color: $color_white;
+            padding: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 15px;
+            cursor: pointer;
+            flex-shrink: 0;
+            .times-icon {
+                font-size: 16px;
+            }
+        }
+    }
+}

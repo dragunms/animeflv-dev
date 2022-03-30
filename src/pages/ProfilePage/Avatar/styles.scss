@@ -1,0 +1,82 @@
+@import 'src/theme';
+
+.avatar {
+    padding: 5px;
+    margin-bottom: 20px;
+    background-color: $color_white;
+    border-radius: 3px;
+    .avatar-wrapper {
+        padding: 30px;
+        height: 280px;
+        position: relative;
+        overflow: hidden;
+        background-color: $color_background;
+        border-radius: 5px;
+        text-align: center;
+        color: $color_white;
+    }
+    .background {
+        position: absolute;
+        left: -10px;
+        top: -10px;
+        right: -10px;
+        bottom: -10px;
+        z-index: 1;
+        opacity: 0.5;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: 50% 50%;
+        -webkit-filter: blur(10px);
+        filter: blur(10px);
+    }
+    .avatar-image-wrap {
+        position: relative;
+        z-index: 2;
+        display: block;
+        width: 150px;
+        height: 150px;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        .avatar-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            padding: 3px;
+            background-color: $color_white;
+        }
+    }
+    .avatar-name {
+        margin-bottom: 10px;
+        position: relative;
+        z-index: 2;
+        box-sizing: border-box;
+        padding: 0;
+        color: $color_white;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+    }
+    .follow-list {
+        position: relative;
+        z-index: 2;
+        .follow-item {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0 3px;
+        }
+        .follow-icon {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            background-color: $color_white_transparent_10;
+            color: $color_white;
+            font-size: 15px;
+            border-radius: 3px;
+        }
+        .google-follow {
+            font-size: 20px;
+        }
+    }
+}

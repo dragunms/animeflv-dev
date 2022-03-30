@@ -1,0 +1,91 @@
+@import 'src/theme';
+
+.login-popover-form {
+    position: absolute;
+    background-color: $color_white;
+    left: auto;
+    right: 5px;
+    z-index: 4;
+    box-shadow: 0 0 5px $color_transparent_10;
+    top: 100%;
+    width: 270px;
+    border-radius: 5px;
+    overflow: inherit;
+    margin-top: 5px;
+    cursor: auto;
+    &:before {
+        content: '';
+        position: absolute;
+        top: -5px;
+        width: 0;
+        height: 0;
+        left: auto;
+        right: 15px;
+        border-left: 5px solid $color_transparent;
+        border-right: 5px solid $color_transparent;
+        border-bottom: 5px solid $color_white;
+    }
+    .title {
+        font-weight: $font_bold;
+        text-transform: uppercase;
+        line-height: 50px;
+        text-align: center;
+        border-bottom: 1px solid $color_gray_F3F3F3;
+        color: $color_text_2;
+        font-size: 15px;
+    }
+    .login-form {
+        padding: 15px;
+        font-size: 12px;
+        .av-text {
+            .av-input {
+                border-radius: 5px;
+                border-color: $color_border;
+            }
+        }
+        .btn-wrap {
+            .submit-btn {
+                background-color: $color_primary;
+                color: $color_white;
+                border: none;
+                width: 100%;
+                padding: 10px 15px;
+                border-radius: 5px;
+                font-weight: $font_bold;
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+        }
+        .social-login {
+            .btn-google {
+                color: $color_white;
+                border: none;
+                width: 100%;
+                padding: 10px 15px;
+                border-radius: 5px;
+                font-weight: $font_bold;
+                font-size: 12px;
+                margin-bottom: 15px;
+                display: flex;
+                align-items: center;
+                .icon-wrapper {
+                    background-color: unset;
+                    font-size: 15px;
+                    padding: unset;
+                    margin-bottom: 3px;
+                }
+            }
+        }
+        .link-wrap {
+            display: flex;
+            justify-content: space-between;
+            .link {
+                color: $color_text_2;
+                transition: all 0.2s linear;
+                &:hover {
+                    color: $color_primary;
+                }
+            }
+        }
+    }
+}

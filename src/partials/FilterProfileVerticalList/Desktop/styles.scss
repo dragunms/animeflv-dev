@@ -1,0 +1,54 @@
+@import 'src/theme';
+
+.filter-profile-vertical-list-desktop {
+    background-color: $color_white;
+    border-radius: 3px;
+    box-shadow: 0 0 30px 0 $color_transparent_10;
+    padding: 15px 20px 20px;
+    margin-bottom: 20px;
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+
+        .title {
+            flex: 1;
+            font-size: 20px;
+            font-weight: $font_bold;
+            line-height: 30px;
+            letter-spacing: -1px;
+            color: $color_text_2;
+        }
+    }
+    .profile-vertical-list-wrapper {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        .profile-vertical-list {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin: 0 -10px;
+            li {
+                flex-basis: 25%;
+            }
+        }
+    }
+    .more {
+        display: flex;
+        justify-content: flex-end;
+        .more-btn {
+            background-color: $color_primary_transparent_10;
+            color: $color_primary;
+            line-height: 30px;
+            padding: 0 40px;
+            border-radius: 30px;
+            font-weight: $font_regular;
+            height: 30px;
+            &:hover {
+                background-color: $color_primary;
+                color: $color_white;
+            }
+        }
+    }
+}
